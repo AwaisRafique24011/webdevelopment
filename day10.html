@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid learning</title>
+</head>
+<style>
+    .container{
+        display: grid;
+        gap: 10px;
+        width: 700px;
+        height: 300px;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(12, 1fr);
+
+    }
+    .container div{
+        background-color: yellow;
+    }
+    .head{
+        grid-column-start: 1;
+        grid-column-end: 13;
+    }
+    .side{
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 12;
+    }
+    .nav{
+        grid-column-start: 4;
+        grid-column-end: 10;
+    }
+    .ads{
+        grid-row-start: 2;
+        grid-row-end: 12;
+        grid-column-start: 10;
+        grid-column-end: 13;
+    }
+    .main{
+        grid-column-start: 4;
+        grid-column-end: 10;
+        grid-row-start: 3;
+        grid-row-end: 12;
+    }
+    .footer{
+        grid-column-start: 1;
+        grid-column-end: 13;
+    }
+    @media (max-width: 720px)
+    {
+    .head{
+        grid-column-start: 1;
+        grid-column-end: 13;
+    }
+    .side{
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 3;
+        grid-row-end: 13;
+    }
+    .nav{
+        grid-column-start: 1;
+        grid-column-end: 13;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        
+    }
+    
+    .main{
+        grid-column-start: 4;
+        grid-column-end: 13;
+        grid-row-start: 3;
+        grid-row-end: 13;
+    }
+    .footer{
+        grid-column-start: 4;
+        grid-column-end: 13;
+    }   
+    .ads{
+        grid-row-start: 13;
+        grid-row-end: 14;
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="head">header</div>
+        <div class="side">sidebar</div>
+        <div class="nav">navigation</div>
+        <div class="ads">ads</div>
+        <div class="main">main</div>
+        <div class="footer">footer</div>
+    </div>
+</body>
+</html>
